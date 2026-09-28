@@ -6,7 +6,18 @@ Date: 9/27/2026
 <html lang="en">
 <head>
     <script src="resources/jquery-4.0.0.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--
+    fallback script that will uses jQuery CDN if local file fails
+    -->
+    <script>
+        if (typeof jQuery === "undefined") {
+            console.log("local file has failed, fallback script will start.");
+            document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"><\/script>');
+        } else {
+            console.log("local file is successful.");
+        }
+    </script>
 </head>
 <body>
     <h1>Common Uses of jQuery</h1>
