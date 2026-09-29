@@ -32,6 +32,31 @@ Date: 9/27/2026
         });
     });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#form").validate({
+                rule: {
+                    name: "required"
+                },
+                message: {
+                    name: "Type in name"
+                },
+                rule: {
+                    email: "required"
+                },
+                message: {
+                    email: "Type in email"
+                },
+                rule: {
+                    Message: "required"
+                },
+                message: {
+                    Message: "Type in Message"
+                },
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Common Uses of jQuery</h1>
